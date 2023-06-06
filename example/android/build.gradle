@@ -1,46 +1,32 @@
 buildscript {
     repositories {
-        maven {
-            url 'http://192.168.31.21:8090/repository/maven-aliyun/'
-            allowInsecureProtocol = true
-        }
-        maven {
-            url 'http://192.168.31.21:8090/repository/maven-central/'
-            allowInsecureProtocol = true
-        }
-        maven {
-            url 'http://192.168.31.21:8090/repository/maven-public/'
-            allowInsecureProtocol = true
-        }
+//        maven {
+//            url 'http://192.168.31.21:8090/repository/android-dependencies/'
+//            allowInsecureProtocol = true
+//        }
+        maven { url 'https://maven.icxl.xyz/repository/android-dependencies/' }
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://maven.aliyun.com/repository/central/' }
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:7.1.2'
     }
 }
 
 allprojects {
     repositories {
-        maven {
-            url 'http://192.168.31.21:8090/repository/maven-aliyun/'
-            allowInsecureProtocol = true
-        }
-        maven {
-            url 'http://192.168.31.21:8090/repository/maven-central/'
-            allowInsecureProtocol = true
-        }
-        maven {
-            url 'http://192.168.31.21:8090/repository/maven-public/'
-            allowInsecureProtocol = true
-        }
+//        maven {
+//            url 'http://192.168.31.21:8090/repository/android-dependencies/'
+//            allowInsecureProtocol = true
+//        }
+        maven { url 'https://maven.icxl.xyz/repository/android-dependencies/' }
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://maven.aliyun.com/repository/central/' }
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
@@ -52,6 +38,6 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
-task clean(type: Delete) {
+tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }

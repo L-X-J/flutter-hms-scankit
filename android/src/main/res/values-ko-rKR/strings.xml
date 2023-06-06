@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icxl.scan.not_permission.dialog.title">시스템 프롬프트</string>
+    <string name="icxl.scan.not_permission.dialog.message">스캔 기능을 사용하려면 카메라 권한을 사용해야하지만이 권한을 거부 한 것으로 감지되었습니다. 여전히 스캔 기능을 사용하려면이 권한을 수동으로 활성화해야합니다. 아래의 \"지금 활성화\"를 클릭하여 설정 페이지로 이동하여 카메라 권한을 찾고 수동으로 활성화하십시오. 취소를 클릭하면이 기능의 사용이 종료됩니다.</string>
+    <string name="icxl.scan.not_permission.dialog.yes">지금 활성화</string>
+    <string name="icxl.scan.not_permission.dialog.no">취소</string>
+    <string name="icxl.scan.page.box.tips">상자 안에 있는 QR 코드를 스캔해주세요</string>
+    <string name="icxl.scan.page.title">코드를 스캔하세요</string>
+</resources>

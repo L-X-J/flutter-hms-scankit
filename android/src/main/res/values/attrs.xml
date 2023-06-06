@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScanBoxView">
+        <attr name="sbv_scanLineDrawable" format="reference"/>
+        <attr name="sbv_scanFrameDrawable" format="reference"/>
+
+        <attr name="sbv_scanLineHeight" format="dimension"/>
+
+        <attr name="sbv_duration" format="integer"/>
+
+        <attr name="sbv_frameWidth" format="dimension"/>
+        <attr name="sbv_frameHeight" format="dimension"/>
+        <attr name="sbv_framePadding" format="dimension"/>
+        <attr name="sbv_framePaddingLeft" format="dimension"/>
+        <attr name="sbv_framePaddingRight" format="dimension"/>
+        <attr name="sbv_framePaddingTop" format="dimension"/>
+        <attr name="sbv_framePaddingBottom" format="dimension"/>
+
+        <attr name="sbv_lineWidth" format="dimension"/>
+        <attr name="sbv_lineHeight" format="float|dimension"/>
+        <attr name="sbv_linePadding" format="dimension"/>
+        <attr name="sbv_linePaddingLeft" format="dimension"/>
+        <attr name="sbv_linePaddingRight" format="dimension"/>
+        <attr name="sbv_linePaddingTop" format="dimension"/>
+        <attr name="sbv_linePaddingBottom" format="dimension"/>
+
+        <attr name="sbv_dim_border" format="color"/>
+    </declare-styleable>
+</resources>

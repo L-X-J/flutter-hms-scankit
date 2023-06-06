@@ -2,9 +2,11 @@ package xyz.icxl.flutter.hms.scan;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 
 import com.huawei.hms.hmsscankit.ScanUtil;
 import com.huawei.hms.ml.scan.HmsScan;
@@ -65,12 +67,14 @@ public class FlutterScankitPlugin implements FlutterPlugin, MethodCallHandler, A
     if (call.method.equals("startScan")) {
       ArrayList<Integer> scanTypes = call.argument("scan_types");
       HmsScanAnalyzerOptions options;
+      int [] scanTypeList;
       if (scanTypes.size() == 1) {
-        options = new HmsScanAnalyzerOptions.Creator().setHmsScanTypes(xyz.icxl.flutter.hms.scan.ScanKitUtilities.single(scanTypes)).create();
+        scanTypeList = new int[]{xyz.icxl.flutter.hms.scan.ScanKitUtilities.single(scanTypes)};
       } else {
-        options = new HmsScanAnalyzerOptions.Creator().setHmsScanTypes(xyz.icxl.flutter.hms.scan.ScanKitUtilities.first(scanTypes), xyz.icxl.flutter.hms.scan.ScanKitUtilities.toArray(scanTypes)).create();
+        scanTypeList =  xyz.icxl.flutter.hms.scan.ScanKitUtilities.toArray(scanTypes);
       }
-      result.success(ScanUtil.startScan(mActivity, REQUEST_CODE_SCAN_ONE, options));
+      mActivity.startActivityForResult(new Intent(mActivity, ScanActivity.class).putExtra("scan_types",scanTypeList), REQUEST_CODE_SCAN_ONE);
+      result.success(0);
     } else {
       result.notImplemented();
     }

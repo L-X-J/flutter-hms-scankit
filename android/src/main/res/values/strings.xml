@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icxl.scan.not_permission.dialog.title">Prompt</string>
+    <string name="icxl.scan.not_permission.dialog.message">Using the scan function requires the use of camera permissions, but we detected that you may have declined this permission. If you still want to use the scan function, you need to manually enable this permission. Click on \"Enable Now\" below to go to the settings page, find the camera permission, and manually enable it. Click \"Cancel\" to end the use of this function.</string>
+    <string name="icxl.scan.not_permission.dialog.yes">Enable Now</string>
+    <string name="icxl.scan.not_permission.dialog.no">Cancel</string>
+    <string name="icxl.scan.page.box.tips">Please scan the QR code within the box</string>
+    <string name="icxl.scan.page.title">scan</string>
+</resources>

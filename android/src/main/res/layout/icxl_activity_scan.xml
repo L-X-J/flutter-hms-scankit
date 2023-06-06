@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/rim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <ImageView
+        android:id="@+id/back_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:src="@drawable/icxl_scan_page_back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10sp"
+        android:layout_toEndOf="@+id/back_img"
+        android:gravity="center"
+        android:text="@string/icxl.scan.page.title"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.1"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="225dp"
+            android:text="@string/icxl.scan.page.box.tips"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <!-- 设置扫码框-->
+        <ImageView
+            android:id="@+id/icxl_scan_box"
+            android:layout_width="238dp"
+            android:layout_height="238dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icxl_scan_box" />
+        <ImageView
+            android:layout_alignStart="@id/icxl_scan_box"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="22dp"
+            android:id="@+id/flush_iv"
+            android:src="@mipmap/icxl_scan_flush_off"
+            android:layout_below="@id/icxl_scan_box"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageView
+            android:layout_alignEnd="@id/icxl_scan_box"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="22dp"
+            android:id="@+id/choose_pic_iv"
+            android:src="@mipmap/icxl_scan_choce_pic"
+            android:layout_below="@id/icxl_scan_box"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </RelativeLayout>
+</FrameLayout>
