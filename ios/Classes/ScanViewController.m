@@ -8,6 +8,7 @@
 #import "ScanViewController.h"
 #import "SGQRCode.h"
 #import <AVFoundation/AVFoundation.h>
+
 @interface ScanViewController ()
 {
     SGScanCode *scanCode;
@@ -71,6 +72,8 @@
 - (SGScanView *)scanView {
     if (!_scanView) {
         _scanView = [[SGScanView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        _scanView.cornerColor = [UIColor colorWithRed:253/255.0 green:111/255.0 blue:48/255.0 alpha:1];
+        _scanView.scanLineName = @"";
     }
     return _scanView;
 }
@@ -101,7 +104,7 @@
 
 - (void)setupNavigationBar {
     
-    UIButton * albumButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-60,40,40,40)];
+    UIButton * albumButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-90-50,40+self.view.bounds.size.height*2/3,50,50)];
     [self.view addSubview:albumButton];
     [albumButton setImage:[self resourceBundleOfImageName:@"album"] forState:UIControlStateNormal];
     [albumButton addTarget:self action:@selector(rightBarButtonItenAction) forControlEvents:UIControlEventTouchUpInside];
@@ -113,9 +116,10 @@
     
     UIButton *flashlightBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.view addSubview:flashlightBtn];
-    CGFloat flashlightBtnW = 120;
-    CGFloat flashlightBtnH = 40;
-    CGFloat flashlightBtnX = 0.5 * (self.view.frame.size.width - flashlightBtnW);
+    CGFloat flashlightBtnW = 50;
+    CGFloat flashlightBtnH = 50;
+    // CGFloat flashlightBtnX = 0.5 * (self.view.frame.size.width - flashlightBtnW);
+    CGFloat flashlightBtnX = 90;
     CGFloat flashlightBtnY = 40+self.view.bounds.size.height*2/3;
      flashlightBtn.frame = CGRectMake(flashlightBtnX, flashlightBtnY, flashlightBtnW, flashlightBtnH);
     [flashlightBtn setImage:[self resourceBundleOfImageName:@"lighton"] forState:UIControlStateNormal];
