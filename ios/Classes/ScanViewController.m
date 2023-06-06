@@ -135,18 +135,6 @@
     [scanCode readWithResultBlock:^(SGScanCode *scanCode, NSString *result) {
        
         if (result == nil) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Tips" message:@"QR code is not recognized yet, please try again" preferredStyle:UIAlertControllerStyleAlert];
-                    UIAlertAction *conform = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                        NSLog(@"点击了确认按钮");
-                    }];
-                   
-                    //3.将动作按钮 添加到控制器中
-                    [alert addAction:conform];
-                   //4.显示弹框
-                [self presentViewController:alert animated:YES completion:nil];
-            });
           } else {
               self.successResult(result);
               [self dismissViewControllerAnimated:YES completion:nil];
@@ -175,6 +163,29 @@
     }
 }
 
+/**
+ 获取当前App使用语言
+ */
+- (NSString *)language {
+    
+    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSArray  *array = [language componentsSeparatedByString:@"-"];
+    NSString *currentLanguage = array[0];
+    
+    if (currentLanguage.length > 0 && [currentLanguage isEqualToString:@"zh"]) {
+        //中文
+        return @"zh_lang";
+    }else if (currentLanguage.length > 0 && [currentLanguage isEqualToString:@"ja"]) {
+        //日文
+        return @"ja_lang";
+    }else if (currentLanguage.length > 0 && [currentLanguage isEqualToString:@"ko"]) {
+        //韩文
+        return @"ko_lang";
+    }else {
+        //英文
+        return @"en_lang";
+    }
+}
 /*
 #pragma mark - Navigation
 
