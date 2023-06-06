@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icxl.scan.not_permission.dialog.title">系统提示</string>
+    <string name="icxl.scan.not_permission.dialog.message">使用扫码功能需要使用相机权限，但是我们监测到您好像拒绝了我们该权限，如果您依然想要使用扫码功能您需要手动打开次权限，点击下方立即开启按钮，将跳转到设置页面您需要找到相机权限，然后手动打开，点击取消，将结束使用该功能。</string>
+    <string name="icxl.scan.not_permission.dialog.yes">立即开启</string>
+    <string name="icxl.scan.not_permission.dialog.no">取消</string>
+    <string name="icxl.scan.page.box.tips">请将二维码放入框中进行扫描</string>
+    <string name="icxl.scan.page.title">扫码</string>
+</resources>

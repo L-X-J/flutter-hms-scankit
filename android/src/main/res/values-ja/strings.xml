@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icxl.scan.not_permission.dialog.title">システムプロンプト</string>
+    <string name="icxl.scan.not_permission.dialog.message">スキャン機能を使用するには、カメラの許可が必要ですが、この権限を拒否した可能性があることを検出しました。スキャン機能を引き続き使用する場合は、この権限を手動で有効にする必要があります。下の「今すぐ有効にする」をクリックして設定ページに移動し、カメラの許可を見つけて手動で有効にしてください。キャンセルをクリックすると、この機能の使用を終了します。</string>
+    <string name="icxl.scan.not_permission.dialog.yes">今すぐ有効にする</string>
+    <string name="icxl.scan.not_permission.dialog.no">キャンセル</string>
+    <string name="icxl.scan.page.box.tips">ボックス内にQRコードをスキャンしてください</string>
+    <string name="icxl.scan.page.title">コードをスキャンしてください</string>
+</resources>
