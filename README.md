@@ -1,6 +1,7 @@
 
 
 ## 更新
+* 升级v1.6.0 升级 flutter 支持版本
 * 升级v1.5.0 修改调用扫码时的UI页面
 * 升级v1.4,iOS移除华为统一扫码服务，采用[SGQRCode](https://github.com/kingsic/SGQRCode),Android 依旧采用华为统一扫码服务
 * 升级v1.3,华为sdk iOS版本升至`1.1.0.303`
