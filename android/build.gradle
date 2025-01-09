@@ -24,6 +24,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace = "xyz.icxl.fluter.hms.scan"
     compileSdkVersion 34
 
     defaultConfig {
