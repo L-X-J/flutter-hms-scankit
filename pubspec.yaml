@@ -1,5 +1,5 @@
 name: flutter_hms_scankit
-description: 华为统一扫码服务 Flutter版本，iOS为SGQRCODE扫码库
+description: The Flutter version of Huawei's unified scanning service, and the iOS version uses the SGQRCODE scanning library.
 homepage: https://github.com/L-X-J/flutter-hms-scankit
 publish_to: none
 version: 1.6.0
